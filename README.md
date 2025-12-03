@@ -1,4 +1,4 @@
-# QR Clipboard
+# CRusQ
 
 A simple desktop app that generates QR codes from clipboard content.
 

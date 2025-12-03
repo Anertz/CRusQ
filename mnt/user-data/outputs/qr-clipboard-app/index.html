@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Clipboard</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="qr-section">
+          <div id="qr-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            <p>Loading...</p>
+          </div>
+          <img id="qr-image" alt="QR Code" style="display: none;" />
+        </div>
+        <div class="text-section">
+          <div class="text-header">Clipboard Content</div>
+          <div id="clipboard-text" class="text-content">
+            Loading clipboard...
+          </div>
+        </div>
+      </div>
+      <div id="error-message" class="error" style="display: none;"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

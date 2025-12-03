@@ -1,0 +1,25 @@
+[package]
+name = "qr-clipboard-app"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "qr_clipboard_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["macos-private-api"] }
+tauri-plugin-clipboard-manager = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+qrcode = "0.14"
+image = "0.25"
+base64 = "0.22"
+window-vibrancy = "0.5"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = "0.26"
+objc = "0.2"
